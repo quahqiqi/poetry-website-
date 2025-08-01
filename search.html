@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>搜索诗集</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #fdfaf5;
+      font-family: "Noto Serif SC", "思源宋体", serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1em;
+    }
+    .container {
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    input#searchBox {
+      width: 100%;
+      padding: 0.75em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 1.5em;
+    }
+    ul#results {
+      list-style: none;
+      padding: 0;
+    }
+    ul#results li {
+      background: #fff;
+      border-left: 4px solid #d4b28c;
+      padding: 1em;
+      margin-bottom: 1em;
+      transition: background 0.3s;
+    }
+    ul#results li:hover {
+      background: #f4ede3;
+    }
+    ul#results li a {
+      text-decoration: none;
+      color: #5a3e2b;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    ul#results li p {
+      margin: 0.5em 0 0;
+      color: #555;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>搜索诗集</h1>
+    <nav>
+      <a href="index.html">首页</a> |
+      <a href="catalog.html">目录</a> |
+      <a href="search.html">搜索</a>
+    </nav>
+  </header>  <div class="container">
+    <input type="text" id="searchBox" placeholder="输入关键词，例如 疯子 / 梦 / 秋..." autofocus />
+    <ul id="results"></ul>
+  </div>  <script src="https://unpkg.com/lunr/lunr.js"></script>  <script src="search.js"></script>  <footer>
+    <p>&copy; 2025 一个青年的天马行空</p>
+  </footer>
+</body>
+</html>
